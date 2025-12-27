@@ -1,153 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sahil Jaju | Profile</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .profile-header {
-      text-align: center;
-    }
-
-    .profile-header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #007bff;
-    }
-
-    h1 {
-      margin: 15px 0 5px;
-    }
-
-    h3 {
-      color: #007bff;
-      margin-bottom: 10px;
-    }
-
-    .section {
-      margin-top: 30px;
-    }
-
-    .section h2 {
-      border-bottom: 2px solid #007bff;
-      display: inline-block;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #007bff;
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin: 5px;
-      font-size: 14px;
-    }
-
-    .links a {
-      display: inline-block;
-      margin-right: 15px;
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Sahil Jaju – Full Stack Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
 
-      <!-- Profile Header -->
-      <div class="profile-header">
-        <img src="https://via.placeholder.com/150" alt="Profile Photo">
-        <h1>Sahil Jaju</h1>
-        <h3>Full Stack Developer</h3>
-        <p>Computer Engineering Graduate | Backend & Frontend Developer</p>
-      </div>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">Sahil Jaju</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#how-i-work">How I Work</a>
+      <a href="#education">Education</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <!-- About -->
-      <div class="section">
-        <h2>About Me</h2>
+<!-- HOME -->
+<section id="home" class="section home textured">
+  <span class="eyebrow">FULL STACK ENGINEER</span>
+
+  <h1>
+    Building reliable backend-heavy web systems<br>
+    for real-world businesses
+  </h1>
+
+  <div class="block">
+    <p>
+      I design and develop production-grade web applications with a strong
+      focus on backend architecture, performance, and long-term maintainability.
+    </p>
+  </div>
+
+  <div class="block">
+    <p>
+      With 2+ years of experience using PHP, JavaScript, and MySQL, I work across
+      the full lifecycle — from system design and API development to deployment
+      and optimization.
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section textured subtle">
+   <div class="section-inner">
+    <span class="eyebrow">ABOUT</span>
+      <h2>About</h2>
+
+      <div class="block">
         <p>
-          I am a Full Stack Developer with experience in building scalable web applications.
-          I have worked on systems like Lead Management Systems, CMS platforms, and catalog-based applications.
-          Passionate about learning business and technology.
+          I’m a Full Stack Web Developer at <strong>Luminar Media</strong>, Hyderabad,
+          working on business-critical applications used in production.
         </p>
       </div>
 
-      <!-- Skills -->
-      <div class="section">
-        <h2>Skills</h2>
-        <div class="skills">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>Laravel</span>
-          <span>React</span>
-          <span>Git</span>
-        </div>
+      <div class="block">
+        <p>
+          My core strength lies in backend-heavy systems — secure REST APIs,
+          database optimization, and predictable deployments.
+        </p>
       </div>
 
-      <!-- Experience -->
-      <div class="section">
-        <h2>Experience</h2>
-        <ul>
-          <li><strong>Luminar Media</strong> – Full Stack Developer</li>
-          <li>Developed Lead Management System</li>
-          <li>Worked on CMS & catalog-based applications</li>
-        </ul>
+      <div class="block">
+        <p>
+          I value clean architecture, ownership, and systems that remain
+          maintainable long after the first release.
+        </p>
       </div>
-
-      <!-- Links -->
-      <div class="section">
-        <h2>Links</h2>
-        <div class="links">
-          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-          <a href="mailto:yourmail@gmail.com">Email</a>
-        </div>
-      </div>
-
     </div>
+</section>
 
-    <footer>
-      © 2025 Sahil Jaju
-    </footer>
+<!-- WORK -->
+<section id="work" class="section">
+  <h2>Work Experience</h2>
+
+  <h3>Luminar Media, Hyderabad</h3>
+  <span class="meta">Full Stack Web Developer · Jul 2023 – Present</span>
+
+  <ul class="work-list metrics">
+    <li><strong>5+</strong> production-grade web applications delivered</li>
+    <li><strong>1,000+</strong> records processed daily in live systems</li>
+    <li><strong>30–40%</strong> dashboard performance improvement</li>
+    <li><strong>50%</strong> reduction in manual operations via automation</li>
+  </ul>
+
+  <div class="block">
+    <p>
+      I’ve worked across multiple internal and client-facing platforms,
+      taking ownership from architecture decisions to production stability.
+    </p>
   </div>
+</section>
+
+<!-- HOW I WORK -->
+<section id="how-i-work" class="section">
+  <h2>How I Work</h2>
+
+  <ul class="work-list">
+    <li><strong>Clarify first:</strong> business goals, constraints, edge cases</li>
+    <li><strong>Design upfront:</strong> schemas, APIs, system flows</li>
+    <li><strong>Build securely:</strong> performance and security by default</li>
+    <li><strong>Iterate smartly:</strong> small, testable improvements</li>
+    <li><strong>Own delivery:</strong> development → deployment → stability</li>
+  </ul>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <h2>Education</h2>
+
+  <div class="block">
+    <p>
+      <strong>B.Tech – Computer Engineering</strong><br>
+      Thakur College of Engineering & Technology, Mumbai<br>
+      <span class="meta">2019 – 2023</span>
+    </p>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section">
+  <h2>Achievements</h2>
+
+  <ul class="list">
+    <li>Built systems used daily by internal teams and external clients</li>
+    <li>Improved performance and stability of production applications</li>
+    <li>Delivered multiple projects from concept to live deployment</li>
+    <li>Implemented Docker-based deployment pipelines</li>
+  </ul>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="section cta">
+  <h2>Work With Me</h2>
+
+  <div class="block">
+    <p>
+      I’m open to full-time roles, freelance projects, and long-term
+      collaborations where quality and ownership matter.
+    </p>
+  </div>
+
+  <div class="cta-actions">
+    <a href="mailto:sahiljaju1997@gmail.com" class="btn primary">Hire Me</a>
+    <a href="mailto:sahiljaju1997@gmail.com" class="btn secondary">Start a Project</a>
+  </div>
+</section>
+
 </body>
 </html>
