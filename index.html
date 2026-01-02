@@ -1,153 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sahil Jaju – Full Stack Web Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Jaju - Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer specializing in backend-heavy web systems, secure APIs, and scalable architecture.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100">
 
-<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-gray-900/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-5">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text cursor-pointer" onclick="scrollToSection('home')">
+                    Sahil Jaju
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-1 bg-gray-800/60 rounded-full p-1.5 border border-gray-700">
+                    <button onclick="scrollToSection('home')" class="nav-btn capitalize px-6 py-2.5 rounded-full font-medium transition-all text-gray-300 hover:text-white hover:bg-gray-700/50">
+                        Home
+                    </button>
+                    <button onclick="scrollToSection('about')" class="nav-btn capitalize px-6 py-2.5 rounded-full font-medium transition-all text-gray-300 hover:text-white hover:bg-gray-700/50">
+                        About
+                    </button>
+                    <button onclick="scrollToSection('projects')" class="nav-btn capitalize px-6 py-2.5 rounded-full font-medium transition-all text-gray-300 hover:text-white hover:bg-gray-700/50">
+                        Projects
+                    </button>
+                    <button onclick="scrollToSection('skills')" class="nav-btn capitalize px-6 py-2.5 rounded-full font-medium transition-all text-gray-300 hover:text-white hover:bg-gray-700/50">
+                        Skills
+                    </button>
+                    <button onclick="scrollToSection('contact')" class="nav-btn capitalize px-6 py-2.5 rounded-full font-medium transition-all text-gray-300 hover:text-white hover:bg-gray-700/50">
+                        Contact
+                    </button>
+                </div>
 
-<header class="header">
-  <div class="header-inner">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
 
-    <div class="logo">Sahil Jaju</div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <button onclick="scrollToSection('home')" class="block w-full text-left capitalize py-2 text-gray-300 hover:text-blue-400">Home</button>
+                <button onclick="scrollToSection('about')" class="block w-full text-left capitalize py-2 text-gray-300 hover:text-blue-400">About</button>
+                <button onclick="scrollToSection('projects')" class="block w-full text-left capitalize py-2 text-gray-300 hover:text-blue-400">Projects</button>
+                <button onclick="scrollToSection('skills')" class="block w-full text-left capitalize py-2 text-gray-300 hover:text-blue-400">Skills</button>
+                <button onclick="scrollToSection('contact')" class="block w-full text-left capitalize py-2 text-gray-300 hover:text-blue-400">Contact</button>
+            </div>
+        </div>
+    </nav>
 
-    <div class="nav-wrapper">
-      <input type="checkbox" id="nav-toggle">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-6 animate-fade-in">
+                <span class="text-blue-400 font-mono text-sm">Full Stack Engineer</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Building Reliable
+                <span class="block gradient-text">
+                    Backend Systems
+                </span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Full Stack Developer with 2+ years crafting production-grade applications. 
+                Specialized in secure APIs, database optimization, and scalable architecture.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button onclick="scrollToSection('contact')" class="px-8 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold transition-all transform hover:scale-105">
+                    Let's Talk
+                </button>
+                <button onclick="scrollToSection('projects')" class="px-8 py-3 border border-gray-600 hover:border-blue-400 rounded-lg font-semibold transition-all">
+                    View Projects
+                </button>
+            </div>
+            <div class="flex gap-6 justify-center mt-8">
+                <a href="https://www.linkedin.com/in/sahiljaju/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/sahiljaju" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="mailto:sahiljaju1997@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
-      <label for="nav-toggle" class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-400">Experience</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Full Stack Developer at <span class="font-semibold text-white">Luminar Media, Hyderabad</span> since July 2023.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        I architect and deliver business-critical web applications used in production environments. 
+                        My focus is on backend systems that are secure, performant, and maintainable.
+                    </p>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Impact</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-3xl font-bold text-blue-400">5+</div>
+                            <div class="text-gray-400">Production Applications</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-purple-400">1,000+</div>
+                            <div class="text-gray-400">Records Processed Daily</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-pink-400">30-40%</div>
+                            <div class="text-gray-400">Performance Improvement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+                <h3 class="text-2xl font-semibold mb-4 text-green-400">My Approach</h3>
+                <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+                    <div>
+                        <div class="font-semibold text-white mb-2">🎯 Business-First Thinking</div>
+                        <p class="text-sm">Understanding requirements deeply before writing code</p>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-2">🏗️ Architecture Mindset</div>
+                        <p class="text-sm">Designing scalable systems that grow with the business</p>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-2">🔒 Security by Default</div>
+                        <p class="text-sm">Building authentication and authorization from the ground up</p>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-2">📊 Data-Driven Optimization</div>
+                        <p class="text-sm">Measuring performance and iterating based on real metrics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#how-i-work">How I Work</a>
-        <a href="#education">Education</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gray-800/30">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-center">Featured Projects</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                Production systems I've built and maintained. Details anonymized to protect client confidentiality.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
+                    <div class="text-sm text-gray-500 mb-2">Digital Marketing Agency</div>
+                    <h3 class="text-xl font-bold mb-3">Lead Management System</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Centralized platform aggregating leads from multiple sources with advanced role-based access control and real-time reporting.
+                    </p>
+                    <div class="mb-4">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">KEY HIGHLIGHTS</div>
+                        <ul class="space-y-1">
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                1,000+ leads processed daily
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                35% improvement in query performance
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Multi-source integration pipeline
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Role-based permission system
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">PHP</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">MySQL</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">REST APIs</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">JavaScript</span>
+                    </div>
+                </div>
 
-  </div>
-</header>
+                <!-- Project 2 -->
+                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
+                    <div class="text-sm text-gray-500 mb-2">Manufacturing Industry</div>
+                    <h3 class="text-xl font-bold mb-3">Product Catalog System</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Scalable catalog solution managing 1,000+ product entries with automated workflows and document management.
+                    </p>
+                    <div class="mb-4">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">KEY HIGHLIGHTS</div>
+                        <ul class="space-y-1">
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Manages 1,000+ product entries
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Automated catalog workflows
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Scalable database architecture
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Admin dashboard with bulk operations
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">PHP</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">MySQL</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">REST APIs</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Docker</span>
+                    </div>
+                </div>
 
-<!-- HOME -->
-<section id="home" class="section">
-  <span class="eyebrow">FULL STACK ENGINEER</span>
+                <!-- Project 3 -->
+                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
+                    <div class="text-sm text-gray-500 mb-2">Education Technology</div>
+                    <h3 class="text-xl font-bold mb-3">Student Management Platform</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Comprehensive workflow system for overseas education processes including applications, documentation, and visa tracking.
+                    </p>
+                    <div class="mb-4">
+                        <div class="text-xs font-semibold text-gray-500 mb-2">KEY HIGHLIGHTS</div>
+                        <ul class="space-y-1">
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Real-time application tracking
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Complex workflow management
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Document automation pipeline
+                            </li>
+                            <li class="text-sm text-gray-300 flex items-start">
+                                <span class="text-blue-400 mr-2">▹</span>
+                                Multi-stage visa processing
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">Node.js</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">MongoDB</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">REST APIs</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <h1>
-    Building reliable backend-heavy web systems<br>
-    for real-world businesses
-  </h1>
-
-  <div class="block">
-    <p>
-      I design and develop production-grade web applications with a strong
-      focus on backend architecture, performance, and long-term maintainability.
-    </p>
-  </div>
-
-  <div class="block">
-    <p>
-      With 2+ years of experience using PHP, JavaScript, and MySQL, I work across
-      the full lifecycle — from system design and API development to deployment
-      and optimization.
-    </p>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <span class="eyebrow">ABOUT</span>
-  <h2>About</h2>
-
-  <div class="block">
-    <p>
-      I’m a Full Stack Web Developer at <strong>Luminar Media</strong>, Hyderabad,
-      working on business-critical applications used in production.
-    </p>
-  </div>
-
-  <div class="block">
-    <p>
-      My core strength lies in backend-heavy systems — secure REST APIs,
-      database optimization, and predictable deployments.
-    </p>
-  </div>
-</section>
-
-<!-- WORK -->
-<section id="work" class="section">
-  <h2>Work Experience</h2>
-
-  <h3>Luminar Media, Hyderabad</h3>
-  <span class="meta">Full Stack Web Developer · Jul 2023 – Present</span>
-
-  <ul class="metrics">
-    <li><strong>5+</strong> production-grade web applications delivered</li>
-    <li><strong>1,000+</strong> records processed daily</li>
-    <li><strong>30–40%</strong> performance improvement</li>
-  </ul>
-</section>
-
-<!-- HOW I WORK -->
-<section id="how-i-work" class="section">
-  <h2>How I Work</h2>
-
-  <ul>
-    <li><strong>Clarify first:</strong> business goals</li>
-    <li><strong>Design upfront:</strong> schemas & APIs</li>
-    <li><strong>Build securely:</strong> performance by default</li>
-    <li><strong>Own delivery:</strong> dev → deploy → stable</li>
-  </ul>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="section">
-  <h2>Education</h2>
-
-  <div class="block">
-    <p>
-      <strong>B.Tech – Computer Engineering</strong><br>
-      Thakur College of Engineering & Technology<br>
-      <span class="meta">2019 – 2023</span>
-    </p>
-  </div>
-</section>
-
-
-<section id="achievements" class="section">
-  <h2>Achievements</h2>
-
-  <ul>
-    <li>Built systems used daily by internal teams and external clients</li>
-    <li>Improved performance and stability of production applications</li>
-    <li>Delivered multiple projects from concept to live deployment</li>
-    <li>Implemented Docker-based deployment pipelines</li>
-  </ul>
-</section>
-
-<!-- CTA -->
-<section id="contact" class="section cta">
-  <h2>Work With Me</h2>
-
-  <div class="block">
-    <p>
-      Open to full-time roles, freelance work, and long-term collaborations.
-    </p>
-  </div>
-
-  <div class="cta-actions">
-    <a href="mailto:sahiljaju1997@gmail.com" class="btn primary">Hire Me</a>
-    <a href="mailto:sahiljaju1997@gmail.com" class="btn secondary">Start Project</a>
-  </div>
-</section>
-
-</body>
-</html>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <svg class="text-blue-400 mr-3 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 rounded-lg text-sm">React.js</span>
+                        <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 rounded-lg text-sm">Next.js</span>
+                        <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 rounded-lg text-sm">JavaScript (ES6+)</span>
+                        <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 rounded-lg text-sm">HTML5</span>
+                        <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 text-blue-300 rounded-lg text-sm">CSS3</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <svg class="text-purple-400 mr-3 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-300 rounded-lg text-sm">PHP</span>
+                        <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-300 rounded-lg text-sm">Laravel</span>
+                        <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-300 rounded-lg text-sm">CodeIgniter</span>
+                        <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-300 rounded-lg text-sm">Node.js</span>
+                        <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-300 rounded-lg text-sm">REST APIs</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <svg class="text-green-400 mr-3 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold">Database</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-green-500/10 border border-green-500/30 text-green-300 rounded-lg text-sm">MySQL</span>
+                        <span class="px-4 py-2 bg-green-500/10 border border-green-500/30 text-green-300 rounded-lg text-sm">MongoDB</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <svg class="text-orange-400 mr-3 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold">DevOps & Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 text-orange-300 rounded-lg text-sm">Docker</span>
+                        <span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 text-orange-300 rounded-lg text-sm">GitHub Actions</span>
+                        <span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 text-orange-300 rounded-lg text-sm">CI/CD</span>
+                        <span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 text-orange-300 rounded-lg text-sm">Linux</span>
+                        <span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 text-orange-300 rounded-lg text-sm">Git
